@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Invitation | Arif & Afilia</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<!-- ========================================= -->
+<!-- COVER SCREEN -->
+<!-- ========================================= -->
+
+<div id="cover" class="cover">
+
+    <div class="cover-overlay"></div>
+
+    <div class="cover-content">
+
+        <p class="cover-subtitle">
+            The Wedding Of
+        </p>
+
+        <h1>
+            Arif
+            <span>&</span>
+            Afilia
+        </h1>
+
+        <p class="cover-date">
+            Minggu, 26 Juli 2026
+        </p>
+
+        <div class="cover-guest">
+
+            <small>Kepada Yth.</small>
+
+            <h3 id="coverGuest">
+                Tamu Undangan
+            </h3>
+
+        </div>
+
+        <button id="openInvitation">
+
+            <i class="fa-solid fa-envelope-open"></i>
+
+            Buka Undangan
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- AUDIO -->
+<!-- ========================================= -->
+
+<audio id="bgMusic" loop>
+
+    <source
+        src="assets/images/music/music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<!-- ========================================= -->
+<!-- HERO -->
+<!-- ========================================= -->
+
+<section class="hero" id="home">
+
+    <!-- Dekorasi -->
+
+    <img src="assets/images/flower-left.png"
+         class="flower flower-left"
+         alt="">
+
+    <img src="assets/images/flower-right.png"
+         class="flower flower-right"
+         alt="">
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            A
+            <span>|</span>
+            A
+
+        </div>
+
+        <ul class="menu">
+
+            <li><a href="#home">Beranda</a></li>
+
+            <li><a href="#couple">Mempelai</a></li>
+
+            <li><a href="#event">Acara</a></li>
+
+            <li><a href="#story">Kisah Kami</a></li>
+
+            <li><a href="#rsvp">RSVP</a></li>
+
+        </ul>
+
+        <button id="musicToggle"
+                class="music-btn">
+
+            <i class="fa-solid fa-music"></i>
+
+        </button>
+
+    </nav>
+
+    <!-- Hero Content -->
+
+    <div class="hero-container">
+
+        <div class="hero-text">
+
+            <p class="subtitle">
+                THE WEDDING OF
+            </p>
+
+            <h1>
+
+                Arif
+
+                <span>&</span>
+
+                Afilia
+
+            </h1>
+
+            <p class="date">
+
+                Minggu,
+
+                <strong>26 Juli 2026</strong>
+
+            </p>
+                        <div class="hero-button">
+
+                <a href="#countdown" class="btn-primary">
+
+                    <i class="fa-solid fa-calendar-heart"></i>
+
+                    Lihat Detail
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Foto Pengantin -->
+
+        <div class="hero-image">
+
+            <img src="assets/images/hero.webp"
+                 alt="Pengantin">
+
+        </div>
+
+    </div>
+
+    <!-- Scroll Down -->
+
+    <a href="#countdown" class="scroll-down">
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+</section>
+
+<!-- ========================================= -->
+<!-- COUNTDOWN -->
+<!-- ========================================= -->
+
+<section class="countdown-section"
+         id="countdown">
+
+    <div class="container">
+
+        <span class="section-subtitle">
+
+            Save The Date
+
+        </span>
+
+        <h2 class="section-title">
+
+            Menuju Hari Bahagia
+
+        </h2>
+
+        <p class="section-description">
+
+            Dengan memohon rahmat dan ridho Allah SWT,
+            kami mengundang Bapak/Ibu/Saudara/i
+            untuk hadir pada hari bahagia kami.
+
+        </p>
+
+        <div class="countdown-wrapper">
+
+            <div class="countdown-box">
+
+                <h3 id="days">
+                    00
+                </h3>
+
+                <span>Hari</span>
+
+            </div>
+
+            <div class="countdown-box">
+
+                <h3 id="hours">
+                    00
+                </h3>
+
+                <span>Jam</span>
+
+            </div>
+
+            <div class="countdown-box">
+
+                <h3 id="minutes">
+                    00
+                </h3>
+
+                <span>Menit</span>
+
+            </div>
+
+            <div class="countdown-box">
+
+                <h3 id="seconds">
+                    00
+                </h3>
+
+                <span>Detik</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- MEMPELAI -->
+<!-- ========================================= -->
+
+<section class="couple-section"
+         id="couple">
+
+    <div class="container">
+
+        <span class="section-subtitle">
+
+            Bride & Groom
+
+        </span>
+
+        <h2 class="section-title">
+
+            Mempelai
+
+        </h2>
+
+        <p class="section-description">
+
+            Assalamu'alaikum Warahmatullahi Wabarakatuh.
+            Dengan memohon rahmat dan ridho Allah SWT,
+            kami bermaksud menyelenggarakan acara
+            pernikahan kami.
+
+        </p>
+
+        <div class="couple-wrapper">
+                        <!-- Pengantin Pria -->
+
+            <div class="couple-card">
+
+                <img src="assets/images/groom.jpg"
+                     alt="Mempelai Pria">
+
+                <h3>
+                    Arif Eka Putra Moha
+                </h3>
+
+                <p class="parent">
+
+                    Putra Pertama dari
+
+                    <br>
+
+                    Bapak Abdul Hamid Moha S.Pd.i
+
+                    <br>
+
+                    &
+
+                    <br>
+
+                    Ibu Erlin Kohe S.Pd
+
+                </p>
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Love Icon -->
+
+            <div class="love-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <!-- Pengantin Wanita -->
+
+            <div class="couple-card">
+
+                <img src="assets/images/bride.jpg"
+                     alt="Mempelai Wanita">
+
+                <h3>
+                    Afilia Butolo
+                </h3>
+
+                <p class="parent">
+
+                    Putri Pertama dari
+
+                    <br>
+
+                    Bapak Kisman Butolo
+
+                    <br>
+
+                    &
+
+                    <br>
+
+                    Ibu Reni Arif
+
+                </p>
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- ACARA -->
+<!-- ========================================= -->
+
+<section class="event-section"
+         id="event">
+
+    <div class="container">
+
+        <span class="section-subtitle">
+
+            Wedding Event
+
+        </span>
+
+        <h2 class="section-title">
+
+            Detail Acara
+
+        </h2>
+
+        <p class="section-description">
+
+            Merupakan suatu kehormatan dan kebahagiaan
+            bagi kami apabila Bapak/Ibu/Saudara/i
+            berkenan hadir dan memberikan doa restu.
+
+        </p>
+
+        <div class="event-wrapper">
+
+            <!-- Akad -->
+
+            <div class="event-card">
+
+                <h3>
+
+                    Akad Nikah
+
+                </h3>
+
+                <p class="event-date">
+
+                    Minggu,
+                    26 Juli 2026
+
+                </p>
+
+                <p class="event-time">
+
+                    Pukul 14.00 WIB
+
+                </p>
+
+                <p class="event-location">
+
+                    R.M. Nazwa
+
+                </p>
+
+            </div>
+
+            <!-- Resepsi -->
+
+            <div class="event-card">
+
+                <h3>
+
+                    Resepsi
+
+                </h3>
+
+                <p class="event-date">
+
+                    Minggu,
+                    26 Juli 2026
+
+                </p>
+
+                <p class="event-time">
+
+                    Pukul 19.00 WIB
+
+                </p>
+
+                <p class="event-location">
+
+                    R.M. Nazwa
+
+                </p>
+
+            </div>
+
+        </div>
+                <!-- Lokasi -->
+
+        <div class="location-box">
+
+            <h3>
+                Lokasi Acara
+            </h3>
+
+            <p>
+
+                R.M. Nazwa
+                <br>
+                Jl. Trans Sulawesi, Telaga Biru, Popayato, Kabupaten Pohuwato, Gorontalo 96467
+
+            </p>
+
+            <!-- Google Maps -->
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=https://maps.app.goo.gl/AtXoSjEoKknWFdLs8"
+                width="100%"
+                height="380"
+                style="border:0;border-radius:20px;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+            <br><br>
+
+            <a href="https://maps.app.goo.gl/AtXoSjEoKknWFdLs8"
+               class="maps-btn"
+               target="_blank">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Buka Google Maps
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- LOVE STORY -->
+<!-- ========================================= -->
+
+<section class="story-section"
+         id="story">
+
+    <div class="container">
+
+        <span class="section-subtitle">
+
+            Our Journey
+
+        </span>
+
+        <h2 class="section-title">
+
+            Love Story
+
+        </h2>
+
+        <p class="section-description">
+
+            Setiap perjalanan memiliki cerita.
+            Semua berawal dari pertemuan sederhana,
+            hingga akhirnya Allah SWT mempersatukan
+            kami dalam ikatan suci pernikahan.
+
+        </p>
+
+        <div class="timeline">
+
+            <!-- 1 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+
+                    2024
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+
+                        Pertama Bertemu
+
+                    </h3>
+
+                    <p>
+
+                        Awal pertemuan kami menjadi
+                        langkah pertama dari kisah yang
+                        indah. Dari saling mengenal,
+                        tumbuh rasa nyaman dan saling
+                        menghargai.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- 2 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+
+                    2025
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+
+                        Menjalin Hubungan
+
+                    </h3>
+
+                    <p>
+
+                        Kami belajar untuk saling
+                        memahami, mendukung, dan
+                        bertumbuh bersama dalam setiap
+                        perjalanan kehidupan.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- 3 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+
+                    2026
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+
+                        Menuju Pernikahan
+
+                    </h3>
+
+                    <p>
+
+                        Dengan restu keluarga dan atas
+                        izin Allah SWT, kami mantap
+                        melangkah menuju hari bahagia
+                        untuk mengikat janji suci.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- BAB 22 - DIGITAL GIFT -->
+<!-- ========================================= -->
+
+<section class="gift-section" id="gift">
+
+    <div class="container">
+
+        <span class="section-subtitle">
+            Wedding Gift
+        </span>
+
+        <h2 class="section-title">
+            Amplop Digital
+        </h2>
+
+        <p class="section-description">
+            Doa restu Anda adalah hadiah terindah bagi kami.
+            Namun jika ingin memberikan tanda kasih, dapat melalui DANA berikut.
+        </p>
+
+        <div class="gift-card">
+
+            <img src="assets/images/dana.png" alt="DANA" class="gift-logo">
+
+            <h3>DANA</h3>
+
+            <div class="gift-number" id="danaNumber">
+                082377508138
+            </div>
+
+            <button class="copy-btn" onclick="copyDana()">
+                📋 Salin Nomor DANA
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- RSVP -->
+<!-- ========================================= -->
+
+<section class="rsvp-section" id="rsvp">
+
+    <div class="container">
+
+        <span class="section-subtitle">
+            RSVP
+        </span>
+
+        <h2 class="section-title">
+            Konfirmasi Kehadiran
+        </h2>
+
+        <p class="section-description">
+            Mohon konfirmasi kehadiran Anda agar kami dapat
+            mempersiapkan acara dengan sebaik-baiknya.
+        </p>
+
+        <div class="rsvp-wrapper">
+
+            <!-- Form RSVP -->
+
+            <div class="rsvp-form">
+
+                <form id="attendanceForm">
+
+                    <div class="input-group">
+                        <input
+                            type="text"
+                            placeholder="Nama Lengkap"
+                            required>
+                    </div>
+
+                    <div class="input-group">
+
+                        <select required>
+
+                            <option value="">
+                                Konfirmasi Kehadiran
+                            </option>
+
+                            <option>
+                                Hadir
+                            </option>
+
+                            <option>
+                                Tidak Hadir
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="rsvp-btn">
+
+                        Kirim Konfirmasi
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Ucapan -->
+
+            <div class="rsvp-message">
+
+                <h3>
+                    Ucapan & Doa
+                </h3>
+
+                <form id="wishForm">
+
+                    <div class="input-group">
+
+                        <input
+                            type="text"
+                            placeholder="Nama"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <textarea
+                            placeholder="Tulis doa dan ucapan..."
+                            rows="6"
+                            required></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="rsvp-btn">
+
+                        Kirim Ucapan
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <h2 class="footer-title">
+
+        Arif
+
+        <span>&</span>
+
+        Afilia
+
+    </h2>
+
+    <p class="footer-date">
+
+        26 Juli 2026
+
+    </p>
+
+    <p class="footer-message">
+
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami
+        apabila Bapak/Ibu/Saudara/i berkenan hadir serta
+        memberikan doa restu untuk pernikahan kami.
+
+    </p>
+
+    <div class="footer-divider"></div>
+
+    <p class="footer-copy">
+
+        © 2026 Wedding Invitation
+
+        <br>
+
+        Dibuat dengan ❤️ oleh Arif
+
+    </p>
+
+</footer>
+
+<!-- ========================================= -->
+<!-- BACK TO TOP -->
+<!-- ========================================= -->
+
+<button
+    id="backToTop"
+    class="back-to-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+<!-- ========================================= -->
+<!-- PETALS -->
+<!-- ========================================= -->
+
+<div class="petals"></div>
+<!-- ========================================= -->
+<!-- SCRIPT -->
+<!-- ========================================= -->
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>

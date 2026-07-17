@@ -1,0 +1,2832 @@
+/* =======================================================
+   WEDDING INVITATION FINAL
+   BAGIAN 1
+======================================================= */
+
+/* =======================================================
+   RESET
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:#444;
+
+    background:#ffffff;
+
+    overflow-x:hidden;
+
+    overflow-y:hidden;
+
+}
+
+/* =======================================================
+   ROOT COLOR
+======================================================= */
+
+:root{
+
+    --primary:#2F5D9F;
+
+    --primary-light:#5F87C7;
+
+    --pink:#F4A7B9;
+
+    --pink-soft:#FBE7ED;
+
+    --white:#ffffff;
+
+    --text:#444444;
+
+    --gray:#777777;
+
+    --shadow:0 18px 40px rgba(0,0,0,.08);
+
+    --radius:24px;
+
+}
+
+/* =======================================================
+   CONTAINER
+======================================================= */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+/* =======================================================
+   COVER SCREEN
+======================================================= */
+
+.cover{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:99999;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.55),
+            rgba(255,255,255,.55)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.cover.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.8s;
+
+}
+
+/* Overlay */
+
+.cover-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+/* =======================================================
+   COVER CONTENT
+======================================================= */
+
+.cover-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+
+    max-width:620px;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+}
+
+.cover-subtitle{
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    margin-bottom:18px;
+
+}
+
+.cover-content h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:76px;
+
+    color:var(--primary);
+
+    line-height:1.1;
+
+}
+
+.cover-content h1 span{
+
+    color:var(--pink);
+
+}
+
+.cover-date{
+
+    margin-top:18px;
+
+    color:#666;
+
+    font-size:20px;
+
+}
+
+.cover-guest{
+
+    margin:40px 0;
+
+}
+
+.cover-guest small{
+
+    color:#777;
+
+}
+
+.cover-guest h3{
+
+    margin-top:12px;
+
+    font-size:34px;
+
+    color:var(--primary);
+
+}
+/* =======================================================
+   TOMBOL COVER
+======================================================= */
+
+#openInvitation{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(47,93,159,.25);
+
+}
+
+#openInvitation:hover{
+
+    background:var(--pink);
+
+    transform:translateY(-4px);
+
+}
+
+/* =======================================================
+   HERO
+======================================================= */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:30px 8%;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.55),
+            rgba(255,255,255,.55)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* =======================================================
+   FLOWER
+======================================================= */
+
+.flower{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    z-index:1;
+
+    animation:flowerFloat 7s ease-in-out infinite;
+
+}
+
+.flower-left{
+
+    width:300px;
+
+    top:0;
+
+    left:0;
+
+}
+
+.flower-right{
+
+    width:300px;
+
+    bottom:0;
+
+    right:0;
+
+}
+
+@keyframes flowerFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =======================================================
+   NAVBAR
+======================================================= */
+
+.navbar{
+
+    position:relative;
+
+    z-index:10;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+}
+
+.logo{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.logo span{
+
+    color:var(--pink);
+
+}
+
+.menu{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:var(--pink);
+
+}
+
+/* =======================================================
+   MUSIC BUTTON
+======================================================= */
+
+.music-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 12px 30px rgba(47,93,159,.25);
+
+}
+
+.music-btn:hover{
+
+    background:var(--pink);
+
+    transform:rotate(15deg);
+
+}
+
+/* =======================================================
+   HERO CONTENT
+======================================================= */
+
+.hero-container{
+
+    min-height:calc(100vh - 90px);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+/* =======================================================
+   HERO TEXT
+======================================================= */
+
+.hero-text{
+
+    flex:1;
+
+    max-width:560px;
+
+    animation:fadeLeft 1s ease;
+
+}
+
+.subtitle{
+
+    font-size:14px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.hero-text h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:86px;
+
+    line-height:1.05;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.hero-text h1 span{
+
+    color:var(--pink);
+
+}
+
+.date{
+
+    font-size:22px;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.hero-button{
+
+    margin-top:35px;
+
+}
+
+/* =======================================================
+   BUTTON
+======================================================= */
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    padding:18px 38px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(47,93,159,.25);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--pink);
+
+    transform:translateY(-5px);
+
+}
+
+/* =======================================================
+   HERO IMAGE
+======================================================= */
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    animation:fadeRight 1s ease;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:470px;
+
+    border-radius:250px 250px 40px 40px;
+
+    border:10px solid rgba(255,255,255,.95);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* =======================================================
+   SCROLL DOWN
+======================================================= */
+
+.scroll-down{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:translateX(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    animation:bounce 2s infinite;
+
+    z-index:5;
+
+}
+
+.scroll-down:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* =======================================================
+   ANIMATION
+======================================================= */
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,12px);
+
+    }
+
+    100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+}
+/* =======================================================
+   COUNTDOWN SECTION
+======================================================= */
+
+.countdown-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.82)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.section-subtitle{
+
+    display:block;
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:var(--pink);
+
+    margin-bottom:15px;
+
+}
+
+.section-title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    max-width:720px;
+
+    margin:0 auto 60px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+/* =======================================================
+   COUNTDOWN BOX
+======================================================= */
+
+.countdown-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.countdown-box{
+
+    width:170px;
+
+    height:170px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.7);
+
+}
+
+.countdown-box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 55px rgba(0,0,0,.12);
+
+}
+
+.countdown-box h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:62px;
+
+    color:var(--primary);
+
+    line-height:1;
+
+    margin-bottom:12px;
+
+}
+
+.countdown-box span{
+
+    font-size:17px;
+
+    color:#777;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+/* =======================================================
+   COUNTDOWN RESPONSIVE
+======================================================= */
+
+@media(max-width:768px){
+
+    .countdown-wrapper{
+
+        gap:18px;
+
+    }
+
+    .countdown-box{
+
+        width:135px;
+
+        height:135px;
+
+    }
+
+    .countdown-box h3{
+
+        font-size:48px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .countdown-box{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .countdown-box h3{
+
+        font-size:40px;
+
+    }
+
+    .section-title{
+
+        font-size:42px;
+
+    }
+
+}
+/* =======================================================
+   MEMPELAI
+======================================================= */
+
+.couple-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.82)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/* =======================================================
+   WRAPPER
+======================================================= */
+
+.couple-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:60px;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+
+/* =======================================================
+   CARD
+======================================================= */
+
+.couple-card{
+
+    width:360px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:35px;
+
+    padding:45px 35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.couple-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--pink)
+    );
+
+}
+
+.couple-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 28px 55px rgba(0,0,0,.12);
+
+}
+
+/* =======================================================
+   FOTO
+======================================================= */
+
+.couple-card img{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid #fff;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.couple-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* =======================================================
+   NAMA
+======================================================= */
+
+.couple-card h3{
+
+    margin-top:28px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:46px;
+
+    color:var(--primary);
+
+}
+
+/* =======================================================
+   ORANG TUA
+======================================================= */
+
+.parent{
+
+    margin-top:18px;
+
+    line-height:2;
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+/* =======================================================
+   SOSIAL MEDIA
+======================================================= */
+
+.social{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.social a{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    background:var(--pink);
+
+    transform:translateY(-5px);
+
+}
+
+/* =======================================================
+   LOVE ICON
+======================================================= */
+
+.love-icon{
+
+    width:95px;
+
+    height:95px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--primary)
+    );
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:36px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+    animation:heartbeat 2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:992px){
+
+    .couple-wrapper{
+
+        flex-direction:column;
+
+        gap:40px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .couple-card{
+
+        width:100%;
+
+        padding:35px 25px;
+
+    }
+
+    .couple-card img{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .couple-card h3{
+
+        font-size:38px;
+
+    }
+
+}
+/* =======================================================
+   ACARA
+======================================================= */
+
+.event-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.82)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* =======================================================
+   WRAPPER
+======================================================= */
+
+.event-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    gap:35px;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+
+/* =======================================================
+   CARD
+======================================================= */
+
+.event-card{
+
+    width:390px;
+
+    background:rgba(255,255,255,.94);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.event-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--pink)
+    );
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+
+}
+
+.event-card h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.event-date{
+
+    font-size:19px;
+
+    font-weight:600;
+
+    color:var(--pink);
+
+    margin-bottom:15px;
+
+}
+
+.event-time{
+
+    color:#666;
+
+    margin-bottom:15px;
+
+    font-size:17px;
+
+}
+
+.event-location{
+
+    color:#777;
+
+    line-height:1.8;
+
+}
+
+/* =======================================================
+   LOKASI
+======================================================= */
+
+.location-box{
+
+    margin-top:80px;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    padding:50px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.location-box h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:44px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.location-box p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.location-box iframe{
+
+    width:100%;
+
+    height:420px;
+
+    border:none;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+
+}
+
+/* =======================================================
+   BUTTON MAPS
+======================================================= */
+
+.maps-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:35px;
+
+    padding:18px 40px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(47,93,159,.25);
+
+}
+
+.maps-btn:hover{
+
+    background:var(--pink);
+
+    transform:translateY(-5px);
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:992px){
+
+    .event-wrapper{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .event-card{
+
+        width:100%;
+
+        max-width:500px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .location-box{
+
+        padding:30px 20px;
+
+    }
+
+    .location-box iframe{
+
+        height:300px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .event-card{
+
+        padding:35px 25px;
+
+    }
+
+    .event-card h3{
+
+        font-size:34px;
+
+    }
+
+    .location-box h3{
+
+        font-size:34px;
+
+    }
+
+}
+/* =======================================================
+   LOVE STORY
+======================================================= */
+
+.story-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.82)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* =======================================================
+   TIMELINE
+======================================================= */
+
+.timeline{
+
+    position:relative;
+
+    max-width:950px;
+
+    margin:80px auto 0;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:4px;
+
+    height:100%;
+
+    background:linear-gradient(
+        to bottom,
+        var(--primary),
+        var(--pink)
+    );
+
+    border-radius:50px;
+
+}
+
+/* =======================================================
+   ITEM
+======================================================= */
+
+.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:25px 45px;
+
+    margin-bottom:60px;
+
+}
+
+.timeline-item:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+
+}
+
+.timeline-item:nth-child(even){
+
+    left:50%;
+
+    text-align:left;
+
+}
+
+/* =======================================================
+   TAHUN
+======================================================= */
+
+.timeline-year{
+
+    position:absolute;
+
+    top:35px;
+
+    width:74px;
+
+    height:74px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--pink)
+    );
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:600;
+
+    font-size:18px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+
+    z-index:2;
+
+}
+
+.timeline-item:nth-child(odd) .timeline-year{
+
+    right:-37px;
+
+}
+
+.timeline-item:nth-child(even) .timeline-year{
+
+    left:-37px;
+
+}
+
+/* =======================================================
+   CONTENT
+======================================================= */
+
+.timeline-content{
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 28px 55px rgba(0,0,0,.12);
+
+}
+
+.timeline-content h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:34px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.timeline-content p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:992px){
+
+    .timeline::before{
+
+        left:35px;
+
+    }
+
+    .timeline-item{
+
+        width:100%;
+
+        left:0 !important;
+
+        padding-left:95px;
+
+        padding-right:10px;
+
+        text-align:left !important;
+
+    }
+
+    .timeline-year{
+
+        left:0 !important;
+
+        right:auto !important;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .timeline-content{
+
+        padding:25px;
+
+    }
+
+    .timeline-content h3{
+
+        font-size:28px;
+
+    }
+
+    .timeline-year{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:16px;
+
+    }
+
+}
+/* =======================================================
+   RSVP
+======================================================= */
+
+.rsvp-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.82),
+            rgba(255,255,255,.82)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.rsvp-wrapper{
+
+    display:flex;
+
+    gap:40px;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+
+.rsvp-form,
+.rsvp-message{
+
+    flex:1;
+
+    min-width:320px;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    padding:45px;
+
+    border-radius:30px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.rsvp-form form,
+.rsvp-message form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-family:"Poppins",sans-serif;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-group textarea{
+
+    resize:vertical;
+
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(47,93,159,.15);
+
+}
+
+.rsvp-btn{
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:18px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.rsvp-btn:hover{
+
+    background:var(--pink);
+
+    transform:translateY(-4px);
+
+}
+
+/* =======================================================
+   FOOTER
+======================================================= */
+
+.footer{
+
+    padding:90px 20px 50px;
+
+    text-align:center;
+
+    background:#1f2f4f;
+
+    color:#fff;
+
+}
+
+.footer-title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:56px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-title span{
+
+    color:var(--pink);
+
+}
+
+.footer-date{
+
+    color:#d9d9d9;
+
+    margin-bottom:25px;
+
+}
+
+.footer-message{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    color:#ececec;
+
+}
+
+.footer-divider{
+
+    width:120px;
+
+    height:3px;
+
+    background:var(--pink);
+
+    margin:40px auto;
+
+    border-radius:50px;
+
+}
+
+.footer-copy{
+
+    color:#d5d5d5;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* =======================================================
+   BACK TO TOP
+======================================================= */
+
+.back-to-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:0 15px 35px rgba(47,93,159,.25);
+
+}
+
+.back-to-top:hover{
+
+    background:var(--pink);
+
+    transform:translateY(-5px);
+
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* =======================================================
+   SCROLL ANIMATION
+======================================================= */
+
+section{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+section.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:992px){
+
+    .hero-container{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        gap:50px;
+
+    }
+
+    .menu{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .rsvp-wrapper{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .hero-text h1{
+
+        font-size:58px;
+
+    }
+
+    .hero-image img{
+
+        max-width:350px;
+
+    }
+
+    .footer-title{
+
+        font-size:42px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cover-content{
+
+        padding:35px 25px;
+
+    }
+
+    .cover-content h1{
+
+        font-size:52px;
+
+    }
+
+    .hero-text h1{
+
+        font-size:44px;
+
+    }
+
+    .btn-primary,
+    .rsvp-btn,
+    .maps-btn,
+    #openInvitation{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .menu{
+
+        gap:15px;
+
+        font-size:14px;
+
+    }
+
+}
+/* ========================================= */
+/* BAB 21 FINAL - PETALS */
+/* ========================================= */
+
+.petals{
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+}
+
+.petal{
+
+    position: absolute;
+
+    top: -80px;
+
+    width: 28px;
+
+    height: 28px;
+
+    background: url("assets/images/petal.png") center/contain no-repeat;
+
+    opacity: 0;
+
+    will-change: transform, opacity;
+
+    animation: petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+    0%{
+
+        opacity: 0;
+
+        transform:
+            translate3d(0,-80px,0)
+            rotate(0deg)
+            scale(.8);
+
+    }
+
+    10%{
+
+        opacity: 1;
+
+    }
+
+    25%{
+
+        transform:
+            translate3d(25px,25vh,0)
+            rotate(90deg)
+            scale(.9);
+
+    }
+
+    50%{
+
+        transform:
+            translate3d(-35px,50vh,0)
+            rotate(180deg)
+            scale(1);
+
+    }
+
+    75%{
+
+        transform:
+            translate3d(30px,75vh,0)
+            rotate(270deg)
+            scale(.95);
+
+    }
+
+    100%{
+
+        opacity: 0;
+
+        transform:
+            translate3d(-20px,110vh,0)
+            rotate(360deg)
+            scale(.85);
+
+    }
+
+}
+/* =========================================
+   BAB 22 - DIGITAL GIFT
+========================================= */
+
+.gift-section{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.85),
+            rgba(255,255,255,.85)
+        ),
+        url("assets/images/background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.gift-card{
+
+    max-width:500px;
+
+    margin:60px auto 0;
+
+    padding:50px 40px;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+    transition:.35s;
+
+}
+
+.gift-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+
+}
+
+.gift-logo{
+
+    width:120px;
+
+    margin-bottom:20px;
+
+}
+
+.gift-card h3{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:42px;
+
+    color:#2F5D9F;
+
+    margin-bottom:20px;
+
+}
+
+.gift-number{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:#333;
+
+    margin-bottom:30px;
+
+    padding:15px;
+
+    border:2px dashed #2F5D9F;
+
+    border-radius:15px;
+
+    background:#f8fbff;
+
+}
+
+.copy-btn{
+
+    border:none;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    background:#2F5D9F;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.copy-btn:hover{
+
+    background:#F4A7B9;
+
+    transform:translateY(-3px);
+
+}
+
+@media(max-width:480px){
+
+    .gift-card{
+
+        padding:35px 25px;
+
+    }
+
+    .gift-logo{
+
+        width:90px;
+
+    }
+
+    .gift-card h3{
+
+        font-size:34px;
+
+    }
+
+    .gift-number{
+
+        font-size:22px;
+
+    }
+
+    .copy-btn{
+
+        width:100%;
+
+    }
+
+}
+/* ========================================= */
+/* BAB 23.1 - PREMIUM SCROLL ANIMATION */
+/* ========================================= */
+
+/* Semua section sebelum muncul */
+
+section{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    filter:blur(8px);
+
+    transition:
+        opacity .9s cubic-bezier(.22,1,.36,1),
+        transform .9s cubic-bezier(.22,1,.36,1),
+        filter .9s cubic-bezier(.22,1,.36,1);
+
+    will-change:opacity,transform;
+
+}
+
+/* Saat sudah terlihat */
+
+section.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    filter:blur(0);
+
+}
+
+/* ========================= */
+/* Animasi Card */
+/* ========================= */
+
+.event-card,
+.story-card,
+.gift-card,
+.rsvp-card,
+.wish-card{
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.event-card:hover,
+.story-card:hover,
+.gift-card:hover,
+.rsvp-card:hover,
+.wish-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* ========================= */
+/* Foto Pengantin */
+/* ========================= */
+
+.couple-card img{
+
+    transition:
+        transform .8s ease,
+        filter .8s ease;
+
+}
+
+.couple-card:hover img{
+
+    transform:scale(1.05);
+
+    filter:brightness(1.05);
+
+}
+
+/* ========================= */
+/* Tombol */
+/* ========================= */
+
+.btn,
+.hero-btn,
+.maps-btn,
+.gift-btn,
+button{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.btn:hover,
+.hero-btn:hover,
+.maps-btn:hover,
+.gift-btn:hover,
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(47,93,159,.25);
+
+}
+
+/* ========================= */
+/* Timeline */
+/* ========================= */
+
+.timeline-item{
+
+    transition:
+        transform .6s ease,
+        opacity .6s ease;
+
+}
+
+.timeline-item:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ========================= */
+/* Countdown */
+/* ========================= */
+
+.countdown-box{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.countdown-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.12);
+
+}
+/* ========================================= */
+/* BAB 23.3 - PREMIUM REVEAL EFFECT */
+/* ========================================= */
+
+/* Delay animasi setiap section */
+
+#mempelai{
+    transition-delay:.05s;
+}
+
+#acara{
+    transition-delay:.10s;
+}
+
+#countdown{
+    transition-delay:.15s;
+}
+
+#story{
+    transition-delay:.20s;
+}
+
+#gallery{
+    transition-delay:.25s;
+}
+
+#gift{
+    transition-delay:.30s;
+}
+
+#rsvp{
+    transition-delay:.35s;
+}
+
+#wishes{
+    transition-delay:.40s;
+}
+
+footer{
+    opacity:0;
+    transform:translateY(60px);
+    filter:blur(6px);
+
+    transition:
+        opacity .9s cubic-bezier(.22,1,.36,1),
+        transform .9s cubic-bezier(.22,1,.36,1),
+        filter .9s cubic-bezier(.22,1,.36,1);
+}
+
+footer.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    filter:blur(0);
+
+}
+
+/* Efek gambar */
+
+img{
+
+    backface-visibility:hidden;
+
+    transform:translateZ(0);
+
+}
+
+/* Efek transisi link */
+
+a{
+
+    transition:
+        color .3s ease,
+        opacity .3s ease;
+
+}
+
+/* Scroll lebih halus */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+/* ========================================= */
+/* BAB 24 - PREMIUM NAVBAR */
+/* ========================================= */
+
+.navbar{
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 60px);
+
+    max-width: 1200px;
+
+    padding: 14px 30px;
+
+    border-radius: 18px;
+
+    transition: all .45s cubic-bezier(.22,1,.36,1);
+
+    z-index: 999;
+
+}
+
+/* Saat di Hero */
+
+.navbar{
+
+    background: transparent;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+
+}
+
+/* Saat discroll */
+
+.navbar.scrolled{
+
+    background: rgba(255,255,255,.72);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    border:1px solid rgba(255,255,255,.35);
+
+}
+
+/* Logo */
+
+.logo{
+
+    transition:.35s;
+
+}
+
+.navbar.scrolled .logo{
+
+    transform:scale(.98);
+
+}
+
+/* Menu */
+
+.menu a{
+
+    transition:
+        color .3s ease,
+        opacity .3s ease;
+
+}
+
+.menu a:hover{
+
+    color:var(--denim);
+
+    opacity:.8;
+
+}
+/* ========================================= */
+/* BAB 24.3 - MOBILE NAVBAR FIX */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        width: calc(100% - 20px);
+
+        top: 10px;
+
+        left: 10px;
+
+        transform: none;
+
+        padding: 12px 16px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .logo {
+
+        font-size: 30px;
+
+    }
+
+    .menu {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 0;
+
+        margin: 0;
+
+    }
+
+    .menu li {
+
+        list-style: none;
+
+    }
+
+    .menu a {
+
+        font-size: 14px;
+
+        padding: 4px 6px;
+
+        white-space: nowrap;
+
+    }
+
+    .music-btn {
+
+        position: absolute;
+
+        top: 14px;
+
+        right: 14px;
+
+    }
+
+    /* Tambahkan jarak agar foto tidak tertutup navbar */
+
+    .hero {
+
+        padding-top: 170px;
+
+    }
+
+}
